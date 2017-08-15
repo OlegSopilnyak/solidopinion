@@ -31,6 +31,7 @@ public class Sum implements Runnable {
 
     @Override
     public void run() {
+        System.out.println("Sum task starts");
         final File dataFile = new File(pathToFile);
         long size = dataFile.length();
         if (size < CHUNK_SIZE) {
