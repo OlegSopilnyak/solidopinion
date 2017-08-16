@@ -54,6 +54,7 @@ public class Sum implements Runnable {
     }
 
     private void calculateParallel(File dataFile) throws IOException {
+        //  Maximum 10 threads will be involved to reading process
         executor.setMaximumPoolSize(10);
         final long chunks = dataFile.length() / CHUNK_SIZE;
         // launch the threads
